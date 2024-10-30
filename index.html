@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in js</title>
+</head>
+<body>
+    <script>
+        let myPromise= new Promise((resolve, reject) => {
+            let bus ='onRoad';
+            if(bus == 'onstreet'){
+                resolve('ok')
+            }else{
+                reject('no');
+
+            }
+        })
+        //true ka Case ma then 
+        .then((res)=>{
+             console.log(res);
+             
+        })
+        // false ka Case ma Catch
+        .catch((out)=>{
+            console.log(out);
+            
+        }).finally(()=>{
+            console.log('Ma chack karta ho?');
+            
+        });
+        
+    </script>
+</body>
+</html>
